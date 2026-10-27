@@ -1,0 +1,28 @@
+type: custom:krs-family-week
+title: KRS Family
+calendars:
+  - name: Tobi
+    match: "Tobi"
+    color: "#478bd1"
+  - name: Melli
+    match: "Melli"
+    color: "#dd77af"
+  - name: Luke (geteilt)
+    match: "Luke (geteilt)"
+    color: "#4ca678"
+  - name: Luke AH
+    match: "Luke AH"
+    color: "#237a52"
+  - name: Charlie
+    match: "Charlie"
+    color: "#d59a41"
+  - name: Familie
+    match: "Familie"
+    color: "#9274ce"
+  - name: Gemeinsam
+    match: "Gemeinsam"
+    color: "#9a88c3"
+meal:
+  name: Essensplan
+  match: "KRS Essensplan"
+  color: "#dc833e"
