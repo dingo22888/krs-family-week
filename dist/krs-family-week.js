@@ -38,7 +38,8 @@ class KrsFamilyWeek extends HTMLElement {
     const end=new Date(monday);end.setDate(end.getDate()+7);
     const f=d=>this.dateKey(d)+" 00:00:00";
     try{
-      const result=await this._hass.callService("calendar","get_events",{entity_id:ids,start_date_time:f(monday),end_date_time:f(end)},undefined,true);
+      const ws=await this._hass.callWS({type:"call_service",domain:"calendar",service:"get_events",service_data:{start_date_time:f(monday),end_date_time:f(end)},target:{entity_id:ids},return_response:true});
+      const result=ws.response||{};
       if(this.loadedKey===key){this.events=result||{};this.error="";this.render(this.resolve(),this.monday());}
     }catch(e){
       if(this.loadedKey===key){this.error=String(e.message||e);this.render(this.resolve(),this.monday());}
